@@ -1,0 +1,126 @@
+/* phase1.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1b1b1b; /* Cineworld background color */
+    color: white;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+header {
+    background-color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white; /* White text color */
+    text-align: center;
+    padding: 3vh 0;
+    margin-bottom: 3vh; /* Add space below the header */
+    position: relative; /* Relative positioning for logo */
+    
+}
+
+header h1 {
+    font-size: 4vh;
+    margin: 0;
+    display: inline-block; /* Allow for inline positioning */
+}
+
+header img {
+    height: 4vh; /* Adjust height of logo */
+    top: 50%; /* Align logo vertically */
+}
+
+.banner {
+    background-image: url('https://media.istockphoto.com/id/1067354644/vector/red-metal-abstract-technology-background.jpg?s=612x612&w=0&k=20&c=72mP50QYoRxsgctb1fLLHihPxU_7OPLkWjx-WR9AyNw='); /* Red metallic background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 2vh 0; /* Slightly decreased padding for a thinner banner */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for a shiny effect */
+}
+
+.banner-text {
+    font-size: 3.5vh; /* Adjust font size */
+    font-weight: bold;
+    color: white; /* White text color for visibility */
+    text-transform: uppercase; /* Convert text to uppercase */
+    letter-spacing: 1px; /* Add letter spacing */
+}
+
+.main {
+    padding: 3vh;
+}
+
+.content {
+    padding: 3vh;
+    border-radius: 1px;
+}
+
+.now-showing {
+    background-color: rgb(95, 95, 95); /* Light grey background for "Now Showing" section */
+    opacity: 90%;
+    padding: 1vh 0;
+    border-radius: 5px;
+    text-align: left; /* Center the content */
+    width: 100%;
+    height: 60vh; /* Adjust height */
+    overflow: auto; /* Add overflow for scrolling if necessary */
+    font-size:xx-large;
+}
+
+.movie-posters {
+    display: flex;
+    justify-content: space-between;
+    gap: 2vh; /* Increase space between posters */
+}
+
+.movie-poster {
+    flex: 1;
+    text-align: center;
+    padding: 2vh;
+    /* background-color: #f2f2f2; Light grey background for posters */
+    border-radius: 5px;
+}
+
+.movie-poster img {
+    width: 15vw; /* Set width of posters to fill container */
+    height: 40vh;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.movie-poster img:hover {
+    transform: scale(1.05);
+}
+
+.movie-title {
+    margin-top: 1vh;
+    font-size: 2.5vh;
+    color: white; /* Set movie title color to white */
+    text-decoration: none; /* Remove underline */
+}
+
+.intro-text {
+    font-size: 3vh; /* Adjust font size */
+    text-align: center; /* Center the text */
+    margin-bottom: 3vh; /* Add space below the text */
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+
+.now-showing a {
+    text-decoration: none; /* Remove underline */
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1" height="1" viewBox="0 0 1 1" xmlns:xlink="http://www.w3.org/1999/xlink"><circle cx="0.05" cy="0.05" r="0.02" fill="white"/><circle cx="0.25" cy="0.75" r="0.02" fill="white"/><circle cx="0.85" cy="0.35" r="0.02" fill="white"/><circle cx="0.65" cy="0.95" r="0.02" fill="white"/><circle cx="0.45" cy="0.15" r="0.02" fill="white"/></svg>');
+    background-size: 32px 32px; /* Adjust the size of speckles */
+    opacity: 0.2; /* Decrease opacity */
+    z-index: -1; /* Ensure it stays behind content */
+}

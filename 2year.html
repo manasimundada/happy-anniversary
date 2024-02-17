@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2 Year Anniversary</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-5bfVcI02PW4xO/NgkYSpSkmJtgxcnDpP3sJ6JmDK/Dv9oJzLbwN6pE5quR5/0TxcLskh3uUnsTH4DOeDjFq3Kw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background-image: url('background.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .container {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; /* Added to center align vertically */
+    }
+    
+    #toggleText {
+        font-size: 5vw; /* Changed font size to 8% of viewport width */
+        font-weight: bold;
+        text-transform: uppercase;
+        color: white;
+        cursor: pointer;
+        background-color: rgb(158, 127, 251); /* Light purple background with full opacity */
+        padding: 2vw; /* Changed padding to 5% of viewport width */
+        border-radius: 2vw; /* Rounded corners, 5% of viewport width */
+        margin-bottom: 1vh; /* Changed margin to 5% of viewport height */
+    }
+    
+    #clickHere {
+        font-size: 3vw; /* Changed font size to 3% of viewport width */
+        color: white;
+        cursor: pointer;
+        background-color: rgb(191, 171, 249);
+        padding: 1vw 1vw; /* Changed padding to 2% top/bottom and 4% left/right of viewport width */
+        border-radius: 1vw; /* Rounded corners, 2% of viewport width */
+        transition: opacity 0.3s ease;
+        margin-bottom: 5vh; /* Changed margin to 5% of viewport height */
+        font-size: 2vw;
+    }
+    
+    .additionalText {
+        display: none; /* Initially hidden */
+        font-size: 3vw; /* Changed font size to 3% of viewport width */
+        color: white;
+        background-color: rgba(191, 171, 249, 1);
+        opacity: 0.9;
+        padding: 2vw; /* Changed padding to 5% of viewport width */
+        border-radius: 1vw; /* Rounded corners, 5% of viewport width */
+        margin-left: 3vw; /* Changed margin to 4% of viewport width */
+        margin-right: 3vw; /* Changed margin to 4% of viewport width */
+        font-size: 2vw;
+    }
+    
+    .additionalText ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    .additionalText ul li {
+        margin-bottom: 2vh; /* Changed margin to 2% of viewport height */
+    }
+    
+    .additionalText ul li a {
+        color: inherit;
+        text-decoration: none;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div id="toggleText" onclick="toggleName()">HAPPY 2 YEAR ANNIVERSARY <span id="name">NIMAI</span></div>
+    <div id="clickHere" onclick="toggleAdditionalText()">Click for my bak bak</div>
+    <div id="additionalText" class="additionalText">
+        Hi Bubu! Happy 2 year anniversary! Ahh we’re so old and big now. To celebrate this year, as my gift I made you a little website, with a lot of bak bak. Since you’re always tryna get me to do work, and you always say imagine if you put half as much work into your work as you do into this relationship. Here’s me trying to merge the two. Hopefully after this I have made a really cool website and most importantly maybe get the title of best gift giver (before you break it again by somehow outdoing me).
+    </div>
+    <div id="additionalText2" class="additionalText">
+        I was thinking about how to go about this, and I thought I’d break it into phases of our relationship, talking a bit about each phase. So here are the phases, I hope you enjoy it!<br>
+        <ul>
+            <li><a href="Phase1/phase1.html" target="_blank">1. The Bestie Era</a></li>
+            <li><a href="Phase2/phase2.html" target="_blank">2. The Denial</a></li>
+            <li><a href="Phase3/phase3.html" target="_blank">3. Just started dating</a></li>
+            <li><a href="Phase4/phase4.html" target="_blank">4. Our first summer</a></li>
+            <li><a href="Phase5/phase5.html" target="_blank">5. The peace</a></li>
+            <li><a href="Phase6/phase6.html" target="_blank">6. Kota long-distance</a></li>
+            <li><a href="Phase7/phase7.html" target="_blank">7. The summer before Uni</a></li>
+            <li><a href="Phase8/phase8.html" target="_blank">8. Uni and big boy decisions</a></li>
+            <li><a href="Phase9/phase9.html" target="_blank">9. The healing</a></li>
+            <li><a href="Phase10/phase10.html" target="_blank">10. December to now</a></li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    function toggleName() {
+        var name = document.getElementById('name');
+        var text = name.innerText;
+        var newText = '';
+        var targetText = '';
+
+        if (text === 'NIMAI') {
+            targetText = 'BUBU';
+        } else {
+            targetText = 'NIMAI';
+        }
+
+        var interval = setInterval(function() {
+            if (text.length > 0) {
+                newText = text.substring(0, text.length - 1);
+                text = newText;
+                name.innerText = newText;
+            } else {
+                clearInterval(interval);
+                var targetIndex = 0;
+                var typingInterval = setInterval(function() {
+                    if (targetIndex < targetText.length) {
+                        newText += targetText.charAt(targetIndex);
+                        name.innerText = newText;
+                        targetIndex++;
+                    } else {
+                        clearInterval(typingInterval);
+                    }
+                }, 100); // typing speed in milliseconds
+            }
+        }, 100); // deleting speed in milliseconds
+    }
+    
+    function toggleAdditionalText() {
+        var clickHere = document.getElementById('clickHere');
+        var additionalText = document.getElementById('additionalText');
+        clickHere.style.display = 'none';
+        additionalText.style.display = 'block';
+        additionalText.onclick = toggleAdditionalText2;
+    }    
+    
+    function toggleAdditionalText2() {
+        var additionalText = document.getElementById('additionalText');
+        var additionalText2 = document.getElementById('additionalText2');
+        additionalText.style.display = 'none';
+        additionalText2.style.display = 'block';
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1b1b1b;
+    color: white;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: orange;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    text-align: center;
+    padding: 3vh 0;
+    margin-bottom: 3vh;
+}
+
+header h1 {
+    font-size: 4vh;
+    margin: 0;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 3vh;
+}
+
+.right-div {
+    flex: 2;
+}
+
+.right-div p {
+    font-size: 2.5vh;
+    line-height: 1.5;
+}
+
+.right-div p:first-child {
+    margin-top: 0;
+}
+
+.left-div {
+    flex: 1;
+    padding-right: 2vw;
+    overflow-y: auto;
+    max-height: 80vh;
+    min-width:33vw;
+}
+
+.image-gallery {
+    overflow-y: auto;
+    min-width:33vw;
+}
+
+.image-gallery img {
+    max-width: 100%;
+    margin-bottom: 1.5vh; /* Converted from 10px to 2.5vh */
+    min-width:33vw;
+}
